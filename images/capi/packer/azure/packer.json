@@ -179,6 +179,7 @@
       "vars_inline": {
         "ARCH": "amd64",
         "OS": "{{user `distribution` | lower}}",
+        "OS_VERSION": "{{user `distribution_version` | lower}}",
         "PROVIDER": "azure",
         "containerd_version": "{{user `containerd_version`}}",
         "containerd_wasm_shims_runtimes": "{{user `containerd_wasm_shims_runtimes` }}",
@@ -213,6 +214,7 @@
     "ansible_user_vars": "",
     "azure_location": null,
     "build_name": null,
+    "build_resource_group_name": "{{ env `BUILD_RESOURCE_GROUP_NAME` }}",
     "build_timestamp": "{{timestamp}}",
     "client_id": null,
     "client_secret": null,
